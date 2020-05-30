@@ -1,27 +1,19 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
-
 /* Required for full background image */
 
-html,
-body,
-header,
-#intro-section {
+html, body, header, #intro {
     height: 100%;
     font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 740px) {
-    html,
-    body,
-    header,
-    #intro-section {
+    html, body, header, #intro {
         height: 100vh;
     }
 }
 
 .top-nav-collapse, .page-footer {
-    background-color: #563e91 !important;
+    background-color: #006adc !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -43,7 +35,6 @@ header,
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 .img-gradient:after {
     content: '';
     position: absolute;
@@ -63,7 +54,7 @@ header,
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 47, 75, 0.5)), to(rgba(220, 66, 37, 0.5)));
     background: linear-gradient(to bottom, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
     /* IE6-9 */
 }
 
@@ -71,63 +62,125 @@ header,
     background: url('../img/header-bg.png') no-repeat;
     background-size: cover;
 }
+
 .navbar:not(.top-nav-collapse) {
     background: #0a6396 !important;
 }
+
 a.nav-link {
     text-transform: uppercase;
     font-weight: 400;
 }
+
 a.navbar-brand {
     font-size: 22px;
 }
+
 a.about-me-btn {
     background: #0a6396 !important;
     border-radius: 22px;
 }
+
 a.about-me-btn:hover {
     background: #05527d !important;
 }
+
 section#about {
     padding-top: 59px !important;
 }
+
 .projects {
     margin-bottom: 55px;
 }
+
 .progress.col-lg-8 {
     padding: 0 !important;
     height: 30px;
     border-radius: 24px;
 }
+
 .skills p {
     text-align: right;
 }
+
 h1, h2 {
     text-transform: uppercase;
 }
-.empdate{
+
+.empdate {
     display: block;
     font-size: 13px;
     color: #797979;
     font-style: italic;
 }
+
 h2 {
     text-align: center;
     font-size: 60px;
     font-weight: bold;
     color: #0961bb;
 }
-.skills-images{
+
+.skills-images {
     margin-top: 64px;
     text-align: center;
 }
+
 img.skill-img {
     width: 100%;
     margin: 0 auto;
 }
+
 img.skill-fiddler {
     width: 63%;
 }
+
 img.skill-sel {
     width: 65%;
+}
+section#skills {
+    background: #095179;
+    color: #fff;
+    padding-top: 62px !important;
+}
+
+section#skills h2 {
+    color: #ffff;
+}
+
+#projects {
+    background-color: #fff !important;
+}
+
+.projects {
+    margin-bottom: 55px;
+    border-bottom: 2px solid #563e91;
+    padding-bottom: 62px;
+}
+
+.projects:last-child {
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 31px;
+}
+
+.btn.btn-sm {
+    font-size: 15px;
+}
+
+.header-perf {
+    height: auto;
+}
+
+#performance-proj #projects {
+    margin-top: 48px;
+    padding-bottom: 37px !important;
+}
+
+#performance-proj section#projects .col-md-4 {
+    margin-bottom: 26px;
+}
+#contact{
+    background-color: #003f63 !important;
+    color: #fff;
 }
