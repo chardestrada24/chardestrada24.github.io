@@ -184,3 +184,10 @@ section#skills h2 {
     background-color: #003f63 !important;
     color: #fff;
 }
+a.navbar-brand {
+    display: none;
+}
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+    box-shadow: none;
+}
