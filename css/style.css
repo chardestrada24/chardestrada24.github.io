@@ -172,7 +172,7 @@ section#skills h2 {
     height: auto;
 }
 
-#performance-proj #projects {
+#projects {
     margin-top: 48px;
     padding-bottom: 37px !important;
 }
@@ -190,4 +190,16 @@ a.navbar-brand {
 .navbar:not(.top-nav-collapse) {
     background: transparent !important;
     box-shadow: none;
+}
+#ecom-proj .navbar:not(.top-nav-collapse), #performance-proj .navbar:not(.top-nav-collapse){
+    background: #0a6396 !important;
+}
+.card-deck {
+    margin-bottom: 30px;
+}
+img {
+    width: 100%;
+}
+.ecom-img{
+    margin-bottom: 35px;
 }
