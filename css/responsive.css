@@ -27,7 +27,7 @@
         margin-bottom: 35px;
     }
     .profile-img{
-        width: 400px;
+        width: 100%;
     }
     .card-deck .card {
         display: block;
