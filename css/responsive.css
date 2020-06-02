@@ -1,0 +1,57 @@
+
+@media (max-width: 1200px) { 
+
+
+}
+
+@media (max-width: 995px) { 
+    .navbar:not(.top-nav-collapse) {
+        background: #0a6396 !important;
+        box-shadow: none;
+    }
+    .education-div{
+        margin-top: 34px;
+    }
+    .skills p {
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .progress.col-lg-8 {
+        padding: 0 !important;
+        height: 30px;
+        border-radius: 24px;
+        margin-bottom: 9px;
+    }
+
+    img.skill-img, img.skill-fiddler, img.skill-sel{
+        margin-bottom: 35px;
+    }
+    .profile-img{
+        width: 400px;
+    }
+    .card-deck .card {
+        display: block;
+        flex: none;
+        width: 366px;
+        margin: 0 auto;
+    }
+    .card-deck {
+        margin-bottom: 0;
+    }
+    .card {
+        margin-bottom: 36px !important;
+    }
+
+    .skills-images {
+        width: 375px;
+        margin: 39px auto 0;
+    }
+
+
+}
+
+@media (max-width: 700px) { 
+
+    
+
+}
