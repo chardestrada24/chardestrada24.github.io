@@ -212,6 +212,7 @@ img {
 .row.social-media{
     margin-bottom: 20px;
     text-align: center;
+    width: 100%;
 }
 .row.social-media a {
     margin-right: 51px;
