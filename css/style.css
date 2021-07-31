@@ -209,3 +209,11 @@ img {
 .proj-btn {
     margin-bottom: 30px;
 }
+.row.social-media{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.row.social-media a {
+    margin-right: 51px;
+    font-size: 54px;
+}
