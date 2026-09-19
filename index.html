@@ -1,16 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A classroom demonstration of modern HTML elements">
-  <meta name="author" content="Your Name">
-  <title>HTML CSS Demonstration</title>
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Richard Estrada, a Software Test Automation / QA Engineer specializing in Cypress, Playwright, API and performance testing." />
+  <title>Richard Estrada | QA Automation Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = saved || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
 </head>
+<body>
 
-<body id="top">
   <!-- ===== Navigation ===== -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
@@ -23,62 +38,176 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle light/dark theme">
+          <span class="icon-moon" aria-hidden="true">&#9789;</span>
+          <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="about">
-        <h1 class="custom-h1">About Me</h1>
-        <p>I design and maintain end-to-end, API, and performance test frameworks, and I care deeply about reliable, maintainable tests that fit cleanly into CI/CD pipelines. I believe quality is a shared responsibility, and good automation is what makes fast releases safe.</p>
-    </section>
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-greeting">Hi, my name is</p>
+      <h1 class="hero-name">Richard Estrada</h1>
+      <h2 class="hero-tagline">I break things so users don't have to.</h2>
+      <p class="hero-desc">
+        I'm a Software Test Automation Engineer focused on building reliable
+        end-to-end, API, and performance test suites that ship quality software
+        with confidence.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">&#8595;</a>
+  </section>
 
-    <section>
-      <h2>My Skills</h2>
-      <p>Here are some of the skills I've developed over the years.</p>
+  <!-- ===== About ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid reveal">
+        <div class="about-img">
+          <img src="images/profile.jpg" alt="Portrait of Richard Estrada" />
+        </div>
+        <div class="about-text">
+          <p>
+            Hello! I'm Richard, a Software Test Automation Engineer who's passionate
+            about quality. My journey into QA started when I realized how much
+            confidence a solid automated test suite gives a team, and it grew into a
+            career built around catching bugs before users ever see them.
+          </p>
+          <p>
+            I design and maintain end-to-end, API, and performance test frameworks,
+            and I care deeply about reliable, maintainable tests that fit cleanly
+            into CI/CD pipelines. I believe quality is a shared responsibility, and
+            good automation is what makes fast releases safe.
+          </p>
+          <p>Here are a few tools and technologies I work with regularly:</p>
+          <ul class="about-tech">
+            <li>Cypress</li>
+            <li>Playwright</li>
+            <li>Selenium WebDriver</li>
+            <li>Postman &amp; Bruno</li>
+            <li>REST Assured</li>
+            <li>JMeter</li>
+            <li>JavaScript / TypeScript</li>
+            <li>Java</li>
+            <li>Git &amp; CI/CD</li>
+            <li>Jenkins / GitHub Actions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <h3>CSS Grid Example</h3>
+  <!-- ===== Skills ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <div class="skill-icon">&#128187;</div>
+          <h3>UI / E2E Automation</h3>
+          <p>End-to-end web testing with Cypress and Playwright, covering cross-browser flows, visual checks, and flaky-test hardening.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128225;</div>
+          <h3>API Automation</h3>
+          <p>Functional and contract testing of REST and GraphQL APIs using Postman, Bruno, and REST Assured, including data-driven suites.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#9889;</div>
+          <h3>Performance Testing</h3>
+          <p>Load, stress, and soak testing with JMeter to find bottlenecks, validate SLAs, and analyze response-time trends.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128241;</div>
+          <h3>Mobile Automation</h3>
+          <p>Native and hybrid mobile app testing on Android and iOS with Appium across real devices and emulators.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128260;</div>
+          <h3>CI/CD &amp; DevOps</h3>
+          <p>Integrating automated suites into Jenkins and GitHub Actions pipelines with parallel runs, reporting, and Docker.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#127895;</div>
+          <h3>BDD &amp; Frameworks</h3>
+          <p>Building maintainable frameworks with Cucumber, TestNG, JUnit, Mocha, and the Page Object Model.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128203;</div>
+          <h3>Test Management</h3>
+          <p>Test planning, case design, and defect tracking with Jira, TestRail, Zephyr, and X-Ray across Agile teams.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128295;</div>
+          <h3>Manual &amp; Exploratory</h3>
+          <p>Functional, regression, exploratory, and accessibility testing to complement automation where it matters most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <p>
-                Grid is useful for creating layouts with rows and columns.
-            </p>
+  <!-- ===== Projects ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project cards injected by js/main.js -->
+      </div>
+    </div>
+  </section>
 
-            <div class="grid-container">
-                <div class="card featured-card">
-                    <h3>Featured Project</h3>
-                    <p>This card occupies two columns.</p>
-                </div>
+  <!-- ===== Contact ===== -->
+  <section class="contact section" id="contact">
+    <div class="container contact-inner">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-lead">
+        Have a question about QA and test automation, or just want to
+        connect? Feel free to reach out, my inbox is always open.
+      </p>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
-                <div class="card">
-                    <h3>Project 2</h3>
-                    <p>Regular grid item.</p>
-                </div>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+      </div>
+      <p>&copy; <span id="year"></span> Richard Estrada. </p>
+    </div>
+  </footer>
 
-                <div class="card">
-                    <h3>Project 3</h3>
-                    <p>Regular grid item.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Project 4</h3>
-                    <p>Regular grid item.</p>
-                </div>
-
-                <button class="btn">View More</button>
-            </div>
-        </section>
-
-    </section>
-  </main>
-
-    <section>
-      <h1> A New Change.</h1>
-      <p> This is a new change to the index.html file. </p>
-    </section>
-  
-
-
-
-
+  <script src="js/main.js"></script>
 </body>
 </html>

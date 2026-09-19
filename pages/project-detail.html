@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study - E-Commerce E2E test suite by Richard Estrada, QA Automation Engineer." />
+  <title>E-Commerce E2E Suite | Richard Estrada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- CSS lives one level up in /css -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = saved || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="navbar scrolled" id="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">Richard<span>.</span></a>
+      <nav class="nav-controls">
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">Back to Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle light/dark theme">
+          <span class="icon-moon" aria-hidden="true">&#9789;</span>
+          <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 140px;">
+    <div class="container" style="max-width: 820px;">
+      <h1 class="section-title">E-Commerce E2E Suite</h1>
+
+      <div class="project-thumb" style="border-radius: var(--radius); overflow: hidden; margin-bottom: 32px;">
+        <!-- Image lives in /images, one level up -->
+        <img src="../images/project1.jpg" alt="E-Commerce E2E test suite preview" style="width:100%;" />
+      </div>
+
+      <div class="project-tags" style="margin-bottom: 24px;">
+        <span>Cypress</span><span>JavaScript</span><span>CI/CD</span>
+      </div>
+
+      <p style="margin-bottom: 16px;">
+        This is a sample case-study page you can duplicate for each project.
+        It reuses the same stylesheet as the home page, so everything stays visually
+        consistent. Swap in the real screenshots, description, and links.
+      </p>
+      <p style="margin-bottom: 16px;">
+        This Cypress suite automates the critical shopping flows of an e-commerce
+        app, product search, add-to-cart, and checkout, running across multiple
+        browsers. Tests execute in parallel on every pull request through the CI
+        pipeline, with screenshots, video, and a dashboard report generated on
+        each run to catch regressions before release.
+      </p>
+
+      <div class="project-links" style="margin-top: 24px;">
+        <a href="#" class="btn btn-primary">Live Demo</a>
+        <a href="#" class="btn btn-outline">Source Code</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Richard Estrada. Built as a demo portfolio.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Theme toggle (this page doesn't load main.js)
+    (function () {
+      var btn = document.getElementById("themeToggle");
+      var root = document.documentElement;
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        var next = current === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
